@@ -363,6 +363,7 @@
 		32714BA32550455600029BD7 /* analysis.c in Sources */ = {isa = PBXBuildFile; fileRef = 32714917254F365E00029BD7 /* analysis.c */; };
 		32714BA42550455600029BD7 /* opus.c in Sources */ = {isa = PBXBuildFile; fileRef = 3271491E254F365E00029BD7 /* opus.c */; };
 		32714BA52550455600029BD7 /* opus_projection_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 3271491F254F365E00029BD7 /* opus_projection_encoder.c */; };
+		FB369EC028488EC800B7EB72 /* opus_umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB369EBE28488E3200B7EB72 /* opus_umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -725,6 +726,8 @@
 		32714B652550439700029BD7 /* http.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = http.c; sourceTree = "<group>"; };
 		32714B662550439700029BD7 /* wincerts.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wincerts.c; sourceTree = "<group>"; };
 		32714B672550439700029BD7 /* stream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
+		FB369EBE28488E3200B7EB72 /* opus_umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opus_umbrella.h; sourceTree = "<group>"; };
+		FB369EBF28488E8F00B7EB72 /* opus.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = opus.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -750,6 +753,8 @@
 		32028CFE254AE93F00A537DE = {
 			isa = PBXGroup;
 			children = (
+				FB369EBF28488E8F00B7EB72 /* opus.modulemap */,
+				FB369EBE28488E3200B7EB72 /* opus_umbrella.h */,
 				3260C6B3255461BD00E8C286 /* ogg.xcodeproj */,
 				3267710F254B5D670041B063 /* Info.plist */,
 				3271477E254F365D00029BD7 /* opus-src */,
@@ -1344,6 +1349,7 @@
 				32714940254F36A100029BD7 /* opus_projection.h in Headers */,
 				3271493D254F36A100029BD7 /* opus_multistream.h in Headers */,
 				32714941254F36A100029BD7 /* opus.h in Headers */,
+				FB369EC028488EC800B7EB72 /* opus_umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1849,6 +1855,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = (
@@ -1973,6 +1980,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_SOURCE_FILE_NAMES = (
@@ -2112,6 +2120,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = opus.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.opus-codec";
 				PRODUCT_NAME = opus;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2136,6 +2145,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MODULEMAP_FILE = opus.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.opus-codec";
 				PRODUCT_NAME = opus;
 				PROVISIONING_PROFILE_SPECIFIER = "";
